@@ -1,0 +1,129 @@
+\documentclass[zihao = -4,cn]{oucart}
+\usepackage{hyperref}   % 设置目录和引用超链接, 取消backref
+
+
+% 设置页边距
+% \usepackage{geometry}
+% \geometry{left=2.5cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
+
+\title{题目}
+\entitle{English Title}
+\author{姓名}
+\studentid{学号}
+\advisor{指导}
+\department{学院}{2016级}
+\dateyear{2020}
+\datemonth{04}
+\dateday{01}
+
+
+\cnabstractkeywords{
+ 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 这是中文摘要这是中文摘这是中文摘这是中文摘这是中文摘。 
+}{
+中文, 关键字
+}
+\enabstractkeywords{
+  这是英文摘要正文, Accurate Image Annotation Algorithm based on Human-machine collaboration.
+  Accurate Image Annotation Algorithm based on Human-machine collaboration.Accurate Image Annotation Algorithm based on Human-machine collaboration.Accurate Image Annotation Algorithm based on Human-machine collaboration.Accurate Image Annotation Algorithm based on Human-machine collaboration.Accurate Image Annotation Algorithm based on Human-machine collaboration.Accurate Image Annotation Algorithm based on Human-machine collaboration.Accurate Image Annotation Algorithm based on Human-machine collaboration.Accurate Image Annotation Algorithm based on Human-machine collaboration.Accurate Image Annotation Algorithm based on Human-machine collaboration.
+}{
+  English, Abstract
+}
+
+\begin{document}
+
+\makecover   % 制作封面
+
+\makesignature  % 制作签字页
+
+\makeabstract  % 制作摘要
+
+\thispagestyle{empty}  % 设置目录样式
+\tableofcontents
+
+\newpage   % 这是手动分页
+\pagenumbering{arabic}
+\setcounter{page}{1}   % 从当前开始页码计数
+% 页码设置为宋体小5的话，要设置页脚了吧，用pagestyle那个，但是要怎么从当前页开始设置呢？
+
+% 正文内容
+
+\section{绪论}
+\subsection{前言}
+\subsection{研究进展}
+测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试文字。测试引用\cite{ouc}. 
+\section{表格图片和公式}
+测试文字。
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width = 0.2\textwidth]{assets/logo}
+    \caption{中国海洋大学}
+    \label{fig:ouc1}
+\end{figure}
+
+Table:
+\begin{table}[!htbp]
+\centering
+\caption{三线表}
+\begin{minipage}[t]{350pt}
+\begin{tabular*}{350pt}{@{\extracolsep{\fill}}ccc}
+\toprule
+第一列 & 第二列 & 第三列 \\
+\midrule
+文字 & English & $\alpha^*$ \\
+文字 & English & $\beta$ \\
+文字 & English & $\gamma$\\
+\bottomrule
+\end{tabular*}
+\footnotesize
+% 数据来源：相关的数据来源。 \\
+% $*$：表中需要解释的内容
+\end{minipage}
+\end{table}
+
+公式\cite{DBLP:journals/corr/DaiHLRS16}：
+\begin{equation}
+ \lim_{x\to 0}{\frac{e^x-1}{2x}}
+ \overset{\left[\frac{0}{0}\right]}{\underset{\mathrm{H}}{=}}
+ \lim_{x\to 0}{\frac{e^x}{2}}={\frac{1}{2}}
+\end{equation}
+\newpage
+
+
+
+\section{模型方法概述}
+\subsection{模型A}
+\subsection{模型B}
+
+\newpage
+
+\section{实验设置}
+\subsection{实验环境}
+\subsection{实验细节}
+
+\newpage
+
+\section{实验结果}
+
+\newpage
+
+\section{实验分析}
+\newpage
+
+\section{总结与展望}
+
+\newpage
+%\bibliographystyle{unsrt}
+\bibliography{main}
+
+\newpage
+
+
+\begin{center}
+\zihao{3} \textbf{致谢} \\
+\end{center}
+
+\newpage
+\begin{center}
+\zihao{3} \textbf{附录} \\
+\end{center}
+\end{document}

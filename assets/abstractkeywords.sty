@@ -1,0 +1,52 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{assets/abstractkeywords}[2015/05/20 Abstract and Keyword Page]
+
+%% Require cnabstract, cnkeyword, enabstract, enkeywords.
+
+\RequirePackage{abstract}
+% \RequirePackage{geometry}
+% \geometry{top=2.54cm,bottom=2.54cm,left=1.91cm,right=1.91cm}  % 对应于Word的中等页边距
+\newcommand*{\cnabstractkeywords}[2]{
+  \def\@cnabstract{#1}
+  \def\@cnkeywords{#2}
+}
+
+\newcommand*{\enabstractkeywords}[2]{
+  \def\@enabstract{#1}
+  \def\@enkeywords{#2}
+}
+
+\newcommand*{\makeabstract}{
+  %\thispagestyle{zhabstract}   % 注释掉这个样式 
+	\thispagestyle{empty}
+  \newpage
+  \pagenumbering{Roman}
+  \begin{center}
+      \zihao{3}{\heiti{\@title}}
+  \end{center}
+  \ifdefined\@cnabstract{
+    \renewcommand\abstractname{\zihao{3}{\heiti{摘\ \ \ 要}}}
+    \begin{abstract}
+      \zihao{-4}{\songti{\@cnabstract}}\par
+      \zihao{-4}{\heiti{\textbf{关键词: \@cnkeywords}}}
+    \end{abstract}
+    \vspace{5mm}
+    \newpage
+  }
+  \fi
+  \ifdefined\@enabstract{
+    % \thispagestyle{enabstract}
+	\thispagestyle{empty}  % 设置pagestyle为empty,则没有页眉页脚
+    \begin{center}
+        \zihao{3}{\heiti{\textbf{\@entitle}}}  % 这是加粗的版本
+     	% \zihao{3}{\heiti{\@entitle}}  % 这是不加粗的版本
+    \end{center}
+    \renewcommand\abstractname{\zihao{3}{\heiti{Abstract}}}
+    \begin{abstract}
+      \zihao{-4}{\songti{\@enabstract}}\par
+      \zihao{-4}{\heiti{\textbf{Keywords: \@enkeywords}}}
+    \end{abstract}
+  }
+  \fi
+  \newpage
+}
